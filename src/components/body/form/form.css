@@ -1,0 +1,31 @@
+label{
+    width: 150px;
+    padding : 5px;
+    margin : 5px;
+    display: inline-block;
+}
+
+.formContainer{
+    padding : 40px 50px;
+    border : lightskyblue solid 1px;
+
+}
+
+input, select {
+    border: 0px !important;
+    border-bottom: 1px solid !important;
+    width: 250px;
+    padding : 5px;
+    margin : 5px;
+    outline: none;
+}
+
+textarea {
+    width: 350px;
+    padding : 5px;
+    margin : 5px;
+}
+
+p{
+    font-weight: bold;
+}
