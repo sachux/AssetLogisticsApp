@@ -7,8 +7,8 @@ function Mobile({ isOpen, setIsOpen}) {
       <i class="fi-rr-cross-circle"></i>
     </div>
     <div className="mobile-option">
-    <a href="#projects" >
-          <i class="fi-rr-edit-alt option-icon"></i>Projects
+    <a href="#bins" >
+          <i class="fi-rr-edit-alt option-icon"></i>Bins
         </a>
     </div>
     <div className="mobile-option">

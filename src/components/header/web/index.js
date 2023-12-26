@@ -4,7 +4,7 @@ import './web.css';
 function Web() {
   return <div className="web">
     <div className="web-option">
-        <a href="#projects" >
+        <a href="#bins" >
           <i class="fi-rr-edit-alt option-icon"></i>Find Bins
         </a>
     </div>

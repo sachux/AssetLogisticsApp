@@ -8,7 +8,7 @@ function RequestTable() {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
-    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Vehicles", 
+    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/WasteBins", 
           {mode:'cors'}
           ).then(response => response.json())
       .then(json => setUsers(json))
@@ -25,32 +25,6 @@ function RequestTable() {
       ) : (
         <>
           <h1>Requests</h1>
-           {/* <div className="container-table100">
-          <table border={1} className="table100.ver1">
-            <tr>
-              <th>Product</th>
-              <th>User Email</th>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Brand</th>
-              <th>Type</th>
-              <th>Prioirty</th>
-            </tr>
-            {products.map(user => (
-              <tr className="row100">
-                <td>{user.product}</td>
-                <td>{user.userdetails}</td>
-                <td>{user.title}</td>
-                <td>{user.description}</td>
-                <td>{user.brand}</td>
-                <td>{user.type}</td>
-                <td>{user.priority}</td>
-
-              </tr>
-            ))}
-          </table>
-          </div>  */}
-
           <div>
             {products.map(user => (
 
@@ -63,23 +37,22 @@ function RequestTable() {
                   </tr>
                   <tr>
                     <td  width="100px" height="100px">
-                      {/* <img src={require("../img/.png")}></img> */}
                        <img width="50px" height="50px"
             
-                      src={require(`../../../assets/${user.brand ? user.brand : 'Serviceps'}.png`)}
+                      src={require(`../../../assets/${user.type ? user.type : 'ALL'}.png`)}
           /> 
-          <div>{user.licensePlate}</div>
+          <div>{user.location}</div>
                     </td>
                     <td>
                         <table>
                         <tr>
-                        <td>{user.vin} </td>
+                        <td>{user.address} </td>
                         </tr>
                         <tr>
-                        <td>{user.make}</td>
+                        <td>{user.zipCode}</td>
                         </tr>
                         <tr>
-                        <td>{user.Hilux} </td>
+                        <td>Fill Percentage : {user.fillPercentage} % </td>
                         </tr>
                         <tr>
                         <td> Type: {user.type}</td>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./body.css";
 import About from "./about/index";
-import Projects from "./projects/index";
+import Bins from "./bins/index";
 import RequestTable from "./requesttable/index";
 import Contact from "./contact/index";
 
@@ -11,8 +11,8 @@ function Body() {
     <section id="about">
       <About />
     </section>
-    <section id="projects">
-      <Projects />
+    <section id="bins">
+      <Bins />
     </section>
     <section id="skills">
       <RequestTable />

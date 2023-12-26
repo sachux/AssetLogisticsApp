@@ -70,84 +70,33 @@ function CreateForm() {
 
   return (
     <>
-      <h2> Create Request </h2>
+      <h2> Search: </h2>
 
       <div className='formContainer'>     
          <form>
 
-          <p>Product Details</p>
-          <hr></hr>
         <label>
-          Brand:</label>
-        <select value={brand} onChange={handlebrandChange}>
-          <option value="Dell">Dell</option>
-          <option value="Lenovo">Lenovo</option>
-          <option value="Apple">Apple</option>
-          <option value="HP">HP</option>
-        </select>
-
-        <br />
-
-        <label>
-          Product:</label>
+          Pincode:</label>
         <input type="text" value={product} onChange={handleproductChange} />
-
-        <br />
-        <br />
-
-
-        <p>Issue/Request Details</p>
-          <hr></hr>
+      
+      <br/>
         <label>
-          Type:</label>
-        <select value={type} onChange={handletypeChange}>
-          <option value="Issue">Issue</option>
-          <option value="Service Request">Service Request</option>
-        </select>
-
-
-        <br />
-
-
-        <label>
-          Title:</label>
-        <input type="text" value={title} onChange={handletitleChange} />
-
-        <br />
-
-
-        <label>
-          Description:</label>
-        <input type="text" value={description} onChange={handledescriptionChange} />
-
-        <br />
-
-        <label>
-          Priority:
+          Type:
         </label>
 
         <select value={priority} onChange={handlepriorityChange}>
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
+          <option value="High">All</option>
+          <option value="Medium">Paper</option>
+          <option value="Low">Plastic</option>
+          <option value="Low">Glass</option>
+          <option value="Low">Food Wasted</option>
         </select>
 
         <br />
         <br />
-
-        <p>User Details</p>
-          <hr></hr>
-
-          <label>
-          Name and Address:
-        </label>
-
-        <textarea type="text" value={name} onChange={handlenameChange} />
-
-        <br />
       </form>
 
-      <input type="submit" value="Submit" onClick={handleSubmit} />
+      <input type="submit" value="Search" onClick={handleSubmit} />
 
       </div>
 
