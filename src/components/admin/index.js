@@ -1,10 +1,10 @@
 import React from "react";
-import "./home.css";
+import "./admin.css";
 import Header from "../header/index";
-import Body from "../body/index";
-import Admin from "./../admin/index";
+import Logistics from "./logistics/index";
 import Footer from "../footer/index";
-import { Route,  Routes } from 'react-router-dom';
+import TaskList from "./tasks/index";
+
 
 function Home() {
   return ( <div className="home">
@@ -12,12 +12,10 @@ function Home() {
         <Header />
     </div>
     <div>
-        <Body />
+        <TaskList />
     </div>
     <div>
-      <Routes>
-        <Route path="/contact" component={Admin} />
-      </Routes>
+        <Logistics />
     </div>
     <div>
         <Footer />

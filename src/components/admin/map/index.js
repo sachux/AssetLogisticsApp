@@ -8,102 +8,6 @@ import {
 
 import "./Map.css";
 
-let markers = [
-  {
-    id: 1,
-    name: "Marthahalli",
-    position: { lat: 12.9579968, lng: 77.6719213 },
-    type: 'ALL'
-  },
-  {
-    id: 2,
-    name: "Whitefield",
-    position: { lat: 12.9926503, lng: 77.7516797 },
-    type: 'PAPER'
-  },
-  {
-    id: 3,
-    name: "KR Puram",
-    position: { lat: 13.0053204, lng: 77.6842826 },
-    type: 'GLASS'
-  },
-  {
-    id: 1,
-    name: "Bommanahalli",
-    position: { lat: 12.9006233, lng: 77.6110096 },
-    type: 'ALL'
-  },
-  {
-    id: 2,
-    name: "Kengeri",
-    position: { lat: 12.9005648, lng: 77.4692307 },
-    type: 'PAPER'
-  },
-  {
-    id: 3,
-    name: "Yeshwantpur",
-    position: { lat: 13.0270872, lng: 77.5251987 },
-    type: 'GLASS'
-  },
-  {
-    id: 1,
-    name: "Hoodi",
-    position: { lat: 12.9883843, lng: 77.700631 },
-    type: 'ALL'
-  },
-  {
-    id: 2,
-    name: "Indiaranagar",
-    position: { lat: 12.972939, lng: 77.6279344 },
-    type: 'PAPER'
-  },
-  {
-    id: 3,
-    name: "HSR Layout",
-    position: { lat: 12.9102576, lng: 77.625223 },
-    type: 'GLASS'
-  },
-  {
-    id: 3,
-    name: "TRUCK1",
-    position: { lat: 12.9102576, lng: 77.625223 },
-    type: 'TRUCK_ON'
-  },
-  {
-    id: 3,
-    name: "TRUCK2",
-    position: { lat: 12.9102576, lng: 77.685223 },
-    type: 'TRUCK_ON'
-  },
-  {
-    id: 3,
-    name: "TRUCK3",
-    position: { lat: 12.9602576, lng: 77.625223 },
-    type: 'TRUCK_OFF'
-  }
-];
-
-const markersTruck = [
-  {
-    id: 3,
-    name: "TRUCK1",
-    position: { lat: 12.9102576, lng: 77.625223 },
-    type: 'TRUCK_ON'
-  },
-  {
-    id: 3,
-    name: "TRUCK2",
-    position: { lat: 12.9102576, lng: 77.685223 },
-    type: 'TRUCK_ON'
-  },
-  {
-    id: 3,
-    name: "TRUCK3",
-    position: { lat: 12.9602576, lng: 77.625223 },
-    type: 'TRUCK_OFF'
-  }
-];
-
 function Map() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: 'AIzaSyAkqtDS3KSBUXnomNGi3y_R6RduE5yzzPY',
@@ -139,7 +43,7 @@ function Map() {
   return (
     <Fragment>
       <div className="container">
-        <h1 className="text-center">Bins on Map</h1>
+        <h1 className="text-center">Bins and Trucks</h1>
         <div style={{ height: "90vh", width: "100%" }}>
           {isLoaded ? (
             <GoogleMap
@@ -156,7 +60,7 @@ function Map() {
                   position={{ 'lat': parseFloat(latitude), 'lng': parseFloat(longitude) }}
                   onClick={() => handleActiveMarker(binId)}
                   icon={{
-                    url:require(`../../assets/${type}.png`),
+                    url:require(`../../../assets/${type}.png`),
                     scaledSize: { width: 30, height: 30 }
                   }}
                 >
@@ -180,7 +84,7 @@ function Map() {
                   position={{ 'lat': parseFloat(latitude), 'lng': parseFloat(logitute) }}
                   onClick={() => handleActiveMarker(vin)}
                   icon={{
-                    url:require(`../../assets/TRUCK_${state == 0 ? 'OFF' : 'ON'}.png`),
+                    url:require(`../../../assets/TRUCK_${state == 0 ? 'OFF' : 'ON'}.png`),
                     scaledSize: { width: 50, height: 50 }
                   }}
                 >

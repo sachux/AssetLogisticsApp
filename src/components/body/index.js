@@ -4,10 +4,13 @@ import About from "./about/index";
 import Bins from "./bins/index";
 import RequestTable from "./requesttable/index";
 import Contact from "./contact/index";
+import Map from "../map/index";
+import SimpleSlider from "./corousal/index";
 
 function Body() {
   return (
   <div className="body">
+
     <section id="about">
       <About />
     </section>
@@ -16,6 +19,11 @@ function Body() {
     </section>
     <section id="skills">
       <RequestTable />
+    </section>
+    <section id="map">
+      <div className="map">
+          <Map />
+      </div>
     </section>
     <section id="contact">
       <Contact />
