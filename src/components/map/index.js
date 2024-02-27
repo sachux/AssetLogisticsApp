@@ -173,7 +173,7 @@ function Map() {
               ))}
 
 
-
+{/* 
               {markerTrucks.map(({ vin, licensePlate, location, logitute, latitude, state, speed }) => (
                 <MarkerF
                   key={vin}
@@ -194,7 +194,7 @@ function Map() {
                     </InfoWindowF>
                   ) : null}
                 </MarkerF>
-              ))}
+              ))} */}
             </GoogleMap>
           ) : null}
         </div>
