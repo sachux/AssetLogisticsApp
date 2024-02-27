@@ -39,7 +39,7 @@ function TaskList() {
                         <td><strong>Date</strong></td>
                         <td><strong>Status</strong></td>
                         <td><strong>Completed At</strong></td>
-                        <td><strong>Action</strong></td>
+                        
                     </tr>
                     {products.map(task => (
                         <tr>
@@ -53,7 +53,7 @@ function TaskList() {
                                 <td>{task.date}</td>
                                 <td>{task.status}</td>
                                 <td>{task.complatedAt}</td>
-                                <td><button>View Route</button></td>
+                               
                         </tr>
                      ))}
                 </table>
