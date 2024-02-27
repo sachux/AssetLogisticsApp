@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react"
-import Separator from "../../common/separator";
 import "./tasks.css";
 
 
 function TaskList() {
-  const [products, setUsers] = useState([])
+  const [tasks, setTasks] = useState([])
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
-    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Employees/tasks/123", 
-          {mode:'cors'}
+    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Employees/tasks/123", {mode:'no-cors'}
           ).then(response => response.json())
-      .then(json => setUsers(json))
+      .then(json => setTasks(json))
       .finally(() => {
         setLoading(false)
       })
@@ -19,14 +17,15 @@ function TaskList() {
 
   return (
     <div className="App">
-      <Separator/>
+     
       {loading ? (
         <div>Loading...</div>
       ) : (
         <>
+          <h2>Welcome Jacob,</h2>
+
           <h1>Tasks</h1>
           <div>
-           
 
               <div className="card">
                 <table>
@@ -40,7 +39,7 @@ function TaskList() {
                         <td><strong>Completed At</strong></td>
                         <td><strong>Action</strong></td>
                     </tr>
-                    {products.map(task => (
+                    {tasks.map(task => (
                         <tr>
                                 <td  width="100px" height="100px">
                                     <img width="50px" height="50px"
