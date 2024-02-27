@@ -8,7 +8,7 @@ function TaskList() {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
-    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Task", 
+    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Employees/tasks/123", 
           {mode:'cors'}
           ).then(response => response.json())
       .then(json => setUsers(json))

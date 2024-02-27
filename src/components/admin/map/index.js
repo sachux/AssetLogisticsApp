@@ -26,7 +26,7 @@ function Map() {
       })
 
       fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Vehicles", 
-      {mode:'cors'}
+      {mode:'cors',referrerPolicy: "unsafe_url"}
       ).then(response => response.json())
   .then(json => setMarkerTrucks(json))
   .finally(() => {
