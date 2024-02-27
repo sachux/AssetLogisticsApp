@@ -60,7 +60,7 @@ function Map() {
                   position={{ 'lat': parseFloat(latitude), 'lng': parseFloat(longitude) }}
                   onClick={() => handleActiveMarker(binId)}
                   icon={{
-                    url:require(`../../assets/${type}.png`),
+                    url:require(`../../../assets/${type}.png`),
                     scaledSize: { width: 30, height: 30 }
                   }}
                 >
@@ -84,7 +84,7 @@ function Map() {
                   position={{ 'lat': parseFloat(latitude), 'lng': parseFloat(logitute) }}
                   onClick={() => handleActiveMarker(vin)}
                   icon={{
-                    url:require(`../../assets/TRUCK_${state == 0 ? 'OFF' : 'ON'}.png`),
+                    url:require(`../../../assets/TRUCK_${state == 0 ? 'OFF' : 'ON'}.png`),
                     scaledSize: { width: 50, height: 50 }
                   }}
                 >
