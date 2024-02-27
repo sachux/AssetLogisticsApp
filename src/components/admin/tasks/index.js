@@ -8,10 +8,8 @@ function TaskList() {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
-    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Employees/tasks/123", 
-          {mode:'no-cors', headers: {
-            "Content-Type": "application/json"
-       }}
+    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Task", 
+          {mode:'cors'}
           ).then(response => response.json())
       .then(json => setUsers(json))
       .finally(() => {
@@ -21,12 +19,13 @@ function TaskList() {
 
   return (
     <div className="App">
-      <Separator/>
+    
       {loading ? (
         <div>Loading...</div>
       ) : (
         <>
-          <h1>Tasks</h1>
+          <h3>Dear Admin,</h3>
+          Please review the list of tasks
           <div>
            
 

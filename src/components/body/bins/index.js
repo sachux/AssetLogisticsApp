@@ -7,17 +7,14 @@ function Bins() {
   const data=null;
   return (
     <div className="bins">
-      <Separator />
       <label className="section-title">Find Bins</label>
 
-      <div width="500px">
+      {/* <div width="500px">
         <p>
          Search with you Pincode
         </p>
         
-      </div>
-
-      <CreateForm/>
+      </div> */}
     </div>
   );
 }

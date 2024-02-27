@@ -19,12 +19,11 @@ function RequestTable() {
 
   return (
     <div className="App">
-      <Separator/>
       {loading ? (
         <div>Loading...</div>
       ) : (
         <>
-          <h1>Requests</h1>
+          <h1>Bins in you city</h1>
           <div>
             {products.map(user => (
 

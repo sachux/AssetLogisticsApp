@@ -7,7 +7,7 @@ function TaskList() {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
-    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Employees/tasks/123", {mode:'no-cors'}
+    fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Employees", {mode:'cors'}
           ).then(response => response.json())
       .then(json => setTasks(json))
       .finally(() => {
@@ -23,8 +23,10 @@ function TaskList() {
       ) : (
         <>
           <h2>Welcome Jacob,</h2>
+          You have a new tasks assigned to you! Good luck!
+         <br/>
+         <br/>
 
-          <h1>Tasks</h1>
           <div>
 
               <div className="card">
@@ -37,7 +39,7 @@ function TaskList() {
                         <td><strong>Date</strong></td>
                         <td><strong>Status</strong></td>
                         <td><strong>Completed At</strong></td>
-                        <td><strong>Action</strong></td>
+                
                     </tr>
                     {tasks.map(task => (
                         <tr>
@@ -51,7 +53,7 @@ function TaskList() {
                                 <td>{task.date}</td>
                                 <td>{task.status}</td>
                                 <td>{task.complatedAt}</td>
-                                <td><button>View Route</button></td>
+                      
                         </tr>
                      ))}
                 </table>

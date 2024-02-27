@@ -70,7 +70,7 @@ function CreateForm() {
 
   return (
     <>
-      <h2> Search: </h2>
+      {/* <h2> Search: </h2>
 
       <div className='formContainer'>     
          <form>
@@ -98,7 +98,7 @@ function CreateForm() {
 
       <input type="submit" value="Search" onClick={handleSubmit} />
 
-      </div>
+      </div> */}
 
       <br />
       <br />
