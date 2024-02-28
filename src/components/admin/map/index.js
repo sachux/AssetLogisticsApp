@@ -43,7 +43,7 @@ function Map() {
   return (
     <Fragment>
       <div className="container">
-        <h1 className="text-center">Bins on Map</h1>
+        <h1 className="text-center">Bins and Trucks on Map</h1>
         <div style={{ height: "90vh", width: "100%" }}>
           {isLoaded ? (
             <GoogleMap
