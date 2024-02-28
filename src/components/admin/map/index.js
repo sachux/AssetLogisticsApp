@@ -8,7 +8,7 @@ import {
 
 import "./Map.css";
 
-function Map() {
+function AdminMap() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: 'AIzaSyAkqtDS3KSBUXnomNGi3y_R6RduE5yzzPY',
   });
@@ -26,7 +26,7 @@ function Map() {
       })
 
       fetch("http://asset-logistics-srv-env.eba-vfppbrqv.us-east-1.elasticbeanstalk.com/api/Vehicles", 
-      {mode:'cors',referrerPolicy: "unsafe_url"}
+      {mode:'cors'}
       ).then(response => response.json())
   .then(json => setMarkerTrucks(json))
   .finally(() => {
@@ -108,4 +108,4 @@ function Map() {
   );
 }
 
-export default Map;
+export default AdminMap;

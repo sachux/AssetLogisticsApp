@@ -2,7 +2,7 @@ import React from "react";
 import "./logistics.css";
 import About from "./../../body/about/index";
 import Trucks from "./../trucks/index";
-import Map from "../map/index";
+import AdminMap from "../map/index";
 
 function Body() {
   return (
@@ -13,7 +13,7 @@ function Body() {
     </section>
     <section id="map">
       <div className="map">
-          <Map />
+          <AdminMap />
       </div>
     </section>
   </div>
