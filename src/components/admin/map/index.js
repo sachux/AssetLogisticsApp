@@ -67,6 +67,7 @@ function Map() {
                   {activeMarker === binId ? (
                     <InfoWindowF onCloseClick={() => setActiveMarker(binId)}>
                       <div>
+                        <h3>{binId}</h3>
                         <p>{address} , {location}</p>
                         <p>Type: {type}</p>
                         <p>Percentage Filled: {fillPercentage}</p>
